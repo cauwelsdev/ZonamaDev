@@ -170,7 +170,7 @@ check_gitbash_win() {
 check_virtualbox_win() {
     local ve=$(wmic cpu get VirtualizationFirmwareEnabled | sed -n 2p)
 
-    if [ "$ve" != "TRUE" ]; then
+    if [ '$ve' != 'TRUE' ]; then
 	echo "############################################################################"
 	echo "## ERROR: YOU MUST ENABLE VIRTUALIZATION IN YOUR BIOS BEFORE YOU CONTINUE ##"
 	echo "############################################################################"
